@@ -17,5 +17,5 @@ dependencies:
   - pip:
     - tqdm
     - xgboost
-	- theano
+	- Theano
 	- keras
