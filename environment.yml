@@ -14,8 +14,10 @@ dependencies:
   - requests
   - docopt
   - scrapy
+  - graphviz
+  - pydot
   - pip:
     - tqdm
     - xgboost
-    - Theano
-    - keras
+    - git+git://github.com/Theano/Theano.git
+    - git+git://github.com/fchollet/keras.git
