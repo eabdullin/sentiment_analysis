@@ -17,6 +17,12 @@ dependencies:
   - graphviz
   - pydot
   - pip:
+    - psutil
+    - nltk
+    - pydot-ng
+    - scikit-image
+    - matplotlib
+    - jsonschema
     - tqdm
     - xgboost
     - git+git://github.com/Theano/Theano.git
