@@ -1,0 +1,21 @@
+name: py3
+dependencies:
+  - python=2.7
+  - ipywidgets = 4.1.0
+  - numpy >= 1.10.0
+  - scipy >= 0.16.0
+  - matplotlib = 1.5.1
+  - pandas = 0.17.1
+  - scikit-learn = 0.17.1
+  - ipython-notebook
+  - lxml
+  - html5lib
+  - BeautifulSoup4
+  - requests
+  - docopt
+  - scrapy
+  - pip:
+    - tqdm
+    - xgboost
+	- theano
+	- keras
