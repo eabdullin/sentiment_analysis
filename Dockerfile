@@ -1,16 +1,9 @@
 # A container with scientific python libraries installed
-# Your analysis container should inherit this one with
-# `FROM everware/science-python`
+# There are installed Theano, keras and xgboost
 
-FROM everware/base
+FROM eabdullin/keras-everware
 
-MAINTAINER Project Everware
-
-USER root
-
-# For python 3
-RUN conda install --yes numpy scipy scikit-learn matplotlib pandas seaborn pip
-RUN pip install --yes pydot-ng scikit-image tqdm xgboost Theano keras nltk
+MAINTAINER Yelaman Abdullin <a.elaman.b@gmail.com>
 
 USER jupyter
 WORKDIR /home/jupyter/
