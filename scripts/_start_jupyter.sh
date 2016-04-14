@@ -24,7 +24,7 @@ if [ "$JPY_API_TOKEN" != "" ] ; then
 	git clone $JPY_GITHUBURL $NOTEBOOK_DIR
 	cd $NOTEBOOK_DIR
 	git checkout $JPY_REPOPOINTER
-	$HOME/miniconda/envs/jupyterhub_py3/bin/jupyterhub-singleuser \
+	$HOME/conda/envs/jupyterhub_py3/bin/jupyterhub-singleuser \
 	  --port=8888 \
 	  --ip=0.0.0.0 \
 	  --user=$JPY_USER \
