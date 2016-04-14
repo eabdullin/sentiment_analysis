@@ -1,8 +1,6 @@
 FROM continuumio/anaconda
 MAINTAINER Kamil Kwiek <kamil.kwiek@continuum.io>
 
-RUN conda env update -n=py27 -f=anaconda-base/environment.yml #  -q QUIET
-
 RUN mkdir -p /srv/
 WORKDIR /srv/
 
