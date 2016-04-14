@@ -1,24 +1,18 @@
-FROM continuumio/anaconda
-MAINTAINER Kamil Kwiek <kamil.kwiek@continuum.io>
+# A container with scientific python libraries installed
+# Your analysis container should inherit this one with
+# `FROM everware/science-python`
 
-RUN mkdir -p /srv/
-WORKDIR /srv/
+FROM everware/base
 
-# fetch juptyerhub-singleuser entrypoint
-ADD https://raw.githubusercontent.com/jupyter/jupyterhub/master/jupyterhub/singleuser.py /usr/local/bin/jupyterhub-singleuser
-RUN chmod 755 /usr/local/bin/jupyterhub-singleuser
+MAINTAINER Project Everware
 
-# jupyter is our user
-RUN useradd -m -s /bin/bash jupyter
+USER root
+
+# For python 3
+RUN conda install --yes numpy scipy scikit-learn matplotlib pandas seaborn pip
+RUN pip install --yes pydot-ng scikit-image tqdm xgboost Theano keras nltk
 
 USER jupyter
-ENV HOME /home/jupyter
-ENV SHELL /bin/bash
-ENV USER jupyter
-
 WORKDIR /home/jupyter/
 
 EXPOSE 8888
-
-ADD anaconda-base/singleuser.sh /srv/singleuser/singleuser.sh
-CMD ["sh", "/srv/singleuser/singleuser.sh"]

@@ -25,5 +25,5 @@ dependencies:
     - jsonschema
     - tqdm
     - xgboost
-    - git+git://github.com/Theano/Theano.git
-    - git+git://github.com/fchollet/keras.git
+    - Theano
+    - k
