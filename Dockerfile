@@ -1,6 +1,6 @@
 # A container with scientific python libraries installed
 # There are installed Theano, keras and xgboost
 
-FROM everware/base
+FROM eabdullin/everware-anaconda
 
-MAINTAINER Project Everware
+MAINTAINER Yelaman Abdullin <a.elaman.b@gmail.com>
