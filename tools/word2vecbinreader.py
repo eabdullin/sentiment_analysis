@@ -1,7 +1,7 @@
 import numpy as np
 import numpy.core.multiarray as multiarray
 import io
-
+import gensim
 class Word2VecBinReader:
 
     def __init__(self):
